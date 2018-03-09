@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.content_wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+@import "header";
+@import "main";
+@import "footer";
+
+.clear {
+  clear: both;
+  font-size: 0;
+  overflow: hidden;
+  height: 0;
+  display: block;
+}

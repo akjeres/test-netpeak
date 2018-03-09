@@ -1,0 +1,127 @@
+@import "variables";
+
+/*About*/
+article.main_about {
+	background-color: $portfolio-background-color;
+	padding-top: 58px;
+	& #carousel-example-generic {
+		text-align: center;
+		& .images_group {
+			padding: 59px 0 44px 0;
+			width: 2*104px + 296px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			& .common_image {
+				width: 104px;
+				opacity: 0.5;
+			}
+			& .active_image {
+				width: 135px;
+			}
+		}
+		& .carousel-control {
+			background: none;
+			& span.arrow.arrow_right {
+				@include triangle-right(3px, 17px,
+					darken(desaturate(adjust-hue($portfolio-background-color, 2), 4.87), 70.59),
+					$portfolio-background-color, 52px, calc(50% - 8px));
+			}
+			& span.arrow.arrow_left {
+				@include triangle-left(3px, 17px,
+					darken(desaturate(adjust-hue($portfolio-background-color, 2), 4.87), 70.59),
+					$portfolio-background-color, 50px, calc(50% - 8px));
+			}
+		}
+		& ol.carousel-indicators {
+			display: flex;
+			align-items: center;
+			width: 100px;
+			margin: 0 auto;
+			left: calc(50% - 34px);
+			bottom: 66px;
+			& li {
+				@include circle(12px);
+				background-color: darken(desaturate(adjust-hue($portfolio-background-color, -220), 17.65), 36.67);
+				border: none;
+				margin-right: 17px;
+			}
+			& li.active {
+				background-color: darken(desaturate(adjust-hue($portfolio-background-color, 2), 4.87), 70.59);
+			}
+		}
+		& p {
+			color: $main-color;
+			width: 567px;
+			margin: 0 auto;
+			line-height: 30px;
+		}
+		& p.slider1_description {
+			font: {
+				family: "Lora";
+				size: 24px;
+				weight: 400;
+			}
+			margin-bottom: 31px;
+		}
+		& p.slider1_link {
+			font: {
+				family: "Open Sans";
+				size: 18px;
+				weight: 400;
+			}
+
+			margin-bottom: 142px;
+			& a {
+				text-decoration: underline;
+				color: $main-color !important;
+				font-weight: 400;
+			}
+		}	
+	}
+	
+}
+h3.main_about_title {
+	@include mainArticleTitle;
+	margin-bottom: 22px;
+}
+ul.main_about_list {
+	display: none;
+}
+@media (max-width: 1024px) {
+	#carousel-example-generic {
+		display: none;
+	}
+	ul.main_about_list {
+		display: block;
+		text-align: center;
+		padding: 0 15px;
+		margin: 20px 0;
+		& li {
+			margin-bottom: 18px;
+		}
+		& p {
+			color: $main-color;
+		}
+		& p.slider1_description {
+			font: {
+				family: "Lora";
+				size: 24px;
+				weight: 400;
+			}
+		}
+		& p.slider1_link {
+			font: {
+				family: "Open Sans";
+				size: 18px;
+				weight: 400;
+			}
+			& a {
+				text-decoration: underline;
+				color: $main-color !important;
+				font-weight: 500;
+			}
+		}
+	}
+}

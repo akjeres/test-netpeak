@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat|Open+Sans:400,600,800|Roboto|Source+Sans+Pro:400,800');
+
+$header-color: #fff;
+$button-color: #00a5ff;
+$button-text-color: #fff;
+$services-circle-color: #f5f6f8;
+$main-color: #3a3f4b;
+$portfolio-menu-color: #999999;
+$portfolio-menu-hover-color: #63b7e6;
+$portfolio-background-color: #f5f6f8;
+$contact-bacground-color: #3b404c;
+$footer-color: #999999;
+@mixin links-not-a($color) {
+	background-color: $color;
+	&:hover {
+		background-color: darken($color, 10%);
+	}
+	&:active {
+		background-color: darken($color, 20%);
+	}
+}
+@mixin menu-link($color) {
+	color: $color;
+	text-decoration: none;
+	&:hover {
+		color: darken($color, 10%);
+	}
+	&:active {
+		color: darken($color, 20%);
+	}
+	&:visited {
+    color: darken($header-color, 5%);
+  }
+}
+@mixin navigationButton {
+  @include links-not-a($button-color);
+	font: {
+    family: "Open Sans";
+    weight: 600;
+    size: 25px;
+  }
+  line-height: 23px;
+  color: $button-text-color;
+  text-decoration: none;
+  border: none;
+  border-radius: 36px;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+}
+@mixin mainArticleTitle {
+	color: $main-color;
+	text-align: center;
+	text-transform: uppercase;
+	font: {
+		size: 42px;
+		family: "Lora";
+		weight: 700;
+	}
+	margin: 0;
+	margin-bottom: 21px;
+}
+
+@mixin circle($diameter) {
+	width: $diameter;
+	height: $diameter;
+	border-radius: $diameter/2;
+}
+
+@mixin triangle-right($width, $height, $color, $bkg-color, $left, $top) {
+	&:before, &:after {
+					content: ''; 
+				    position: absolute;
+				    left: $left;
+				    top: $top;
+				    border: $height solid transparent;
+				    border-left: $height solid $color;
+				}
+				&:after {
+				    border-left: $height solid $bkg-color;
+				    left: $left - $width;
+				}
+}
+@mixin triangle-left($width, $height, $color, $bkg-color, $right, $top) {
+	&:before, &:after {
+					content: ''; 
+				    position: absolute;
+				    right: $right;
+				    top: $top;
+				    border: $height solid transparent;
+				    border-right: $height solid $color;
+				}
+				&:after {
+				    border-right: $height solid $bkg-color;
+				    right: $right - $width;
+				}
+}
+@mixin links-not-a($color) {
+	background-color: $color;
+	&:hover {
+		background-color: darken($color, 10%);
+	}
+	&:active {
+		background-color: darken($color, 20%);
+	}
+}

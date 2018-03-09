@@ -1,0 +1,53 @@
+@import "variables";
+
+/*Brands*/
+article.main_brands {
+	margin: 0 115px;
+	padding-bottom: 122px;
+	& .decoration_underline {
+		margin-bottom: 78px;
+	}
+}
+h3.main_brands_title {
+	@include mainArticleTitle;
+	margin-top: 66px;
+}
+div.slick-carousel.slider0 {
+	& div.slick-slide.slick-active {
+		opacity: 0.5;
+	}
+	& div.slick-track {
+		display: flex;
+		align-items: center;
+		justify-content: justify;
+		//max-width: 1170px;
+		& img {
+			flex-grow: 1;
+		}
+	}
+}
+ul.brand-names-list {
+	display: none;
+}
+@media (max-width: 1024px) {
+	article.main_brands {
+		margin: 0 auto;
+		padding: 0 15px;
+		padding-bottom: 21px;
+		& .decoration_underline {
+			margin-bottom: 20px;
+		}
+	}
+	div.slick-carousel {
+		display: none;
+	}
+	ul.brand-names-list {
+		display: block;
+		text-align: center;
+		font: {
+			family: "Lora";
+			weight: 700;
+			size: 24px;
+		}
+	}
+}
