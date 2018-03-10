@@ -73,11 +73,6 @@ h3.main_services_title {
 .servises_group_row {
 	margin-bottom: 84px;
 }
-@media (max-width: 1024px) and (min-width: 769px) {
-	.servises_group_row {
-		justify-content: space-evenly;
-	}
-}
 @media (max-width: 768px) {
 	.servises_group_row {
 		justify-content: space-around;
